@@ -29,6 +29,9 @@ jobs:
       with:
         path: ~/.cache/ms-playwright/
         key: ${{ runner.os }}-browsers
+    - name: Install extra fonts
+      run: |
+        sudo apt-get install fonts-arphic-ukai fonts-arphic-uming fonts-ipafont-mincho fonts-ipafont-gothic fonts-unfonts-core
     - name: Install dependencies
       run: |
         pip install -r requirements.txt
